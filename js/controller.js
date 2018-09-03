@@ -48,7 +48,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 			// TOP TRACKS
 			$http({
 				method:'get',
-				url :'http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&limit=12&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'		
+				url :'https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&limit=12&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'		
 			}).then(function(res){
 				$scope.TopTrack = res.data.tracks.track;
 				$scope.animate=true;
@@ -61,7 +61,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 			// TOP ARTIST
 			$http({
 				method:'get',
-				url :'http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&limit=12&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'		
+				url :'https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&limit=12&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'		
 			}).then(function(res){
 				$scope.TopArtist = res.data.artists.artist;
 				$rootScope.Loader=false;
@@ -72,7 +72,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 			// TREND TRACKS
 			$http({
 				method:'get',
-				url :'http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&limit=10&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'		
+				url :'https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&limit=10&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'		
 			}).then(function(res){
 				$scope.trend = res.data.tracks.track;
 				$rootScope.Loader=false;
@@ -97,7 +97,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 						$rootScope.Loader=true;
 					$http({
 						method:'get',
-						url:'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist='+artistSearchQuery+'&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
+						url:'https://ws.audioscrobbler.com/2.0/?method=artist.search&artist='+artistSearchQuery+'&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
 					}).then(function(res){
 						$scope.ArtistMatch=res.data.results.artistmatches.artist;
 						console.log($scope.ArtistMatch);
@@ -119,7 +119,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 					$rootScope.Loader=true;
 					$http({
 						method:'get',
-						url:' http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist='+name+'&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
+						url:' https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist='+name+'&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
 					}).then(function(res){
 
 						$scope.ArtistDetails=res.data.artist;
@@ -132,7 +132,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 					});	
 					$http({
 						method:'get',
-						url:' http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist='+name+'&limit=8&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
+						url:' https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist='+name+'&limit=8&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
 					}).then(function(res){
 						$scope.ArtistAlbums=res.data.topalbums.album;
 						$rootScope.Loader=false;
@@ -167,7 +167,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 					$scope.track =true;
 						$http({
 							method:'get',
-							url:'http://ws.audioscrobbler.com/2.0/?method=track.search&track='+name+'&page='+pageNo+'&limit=10&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
+							url:'https://ws.audioscrobbler.com/2.0/?method=track.search&track='+name+'&page='+pageNo+'&limit=10&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
 						}).then(function(res){
 							$scope.TrackSearched = res.data.results.trackmatches.track;
 							$scope.animate=true;
@@ -184,7 +184,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 					$rootScope.Loader=true;
 						$http({
 							method:'get',
-							url:'http://ws.audioscrobbler.com/2.0/?method=album.search&album='+name+'&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
+							url:'https://ws.audioscrobbler.com/2.0/?method=album.search&album='+name+'&api_key=6ad3d5ac3e6ad0825c74890e74f8297e&format=json'
 						}).then(function(res){
 							$scope.AlbumMatched=res.data.results.albummatches.album;
 							console.log($scope.AlbumMatched);
@@ -215,7 +215,7 @@ app.controller('audioMafia',function($scope,$http,$rootScope,$location,$window){
 					var param = $scope.user;
 					$http({
 						method:'post',
-						url:'wwww.post.com/',
+						url:'https://formspree.io/toxyanil@gmail.com',
 						data: $scope.user
 					}).then(function(res){
 						console.log(sucess);
