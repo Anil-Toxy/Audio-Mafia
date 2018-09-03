@@ -1,0 +1,54 @@
+
+<div style="padding-top: 5em" class=" animated flipInY">
+	<div class="row justify-content-center">
+	
+		<h1 class="display-4" style="color: white">Search Album<span class="badge badge-pill badge-warning">'{{AlbumSearchQuery}}'</span></h1>
+	</div>
+	<div class="row justify-content-center">
+	
+		<input type="search" class="col-md-8 justify-content-center inputSearch"   ng-model="AlbumSearchQuery">
+	</div>
+	<div class="row justify-content-center ">
+		<button type="submit" class="col-md-2 btn btnSearch" value="SEARCH" ng-click="AlbumSearch(AlbumSearchQuery)"><span class="	fa fa-search"></span></button>
+	</div>
+		
+	</div>
+	
+	<div class="row justify-content-center">
+		<div class=" col-md-2 card"  ng-repeat= "AlbumMatch in AlbumMatched" ng-class-odd="{'animated slideInLeft':animate}" 
+		ng-class-even="{'animated slideInRight':animate}"ng-show="animate">
+			  <img  src="{{AlbumMatch.image[2]['#text']}}" alt="{{AlbumMatch.name}}" class="img-fulid rounded">
+			 <div class="card-body text-center">
+			    <p class="card-title">{{AlbumMatch.name}}</p>
+			    <p class="card-text">{{AlbumMatch.artist}}</p>
+			    <a href="#" class="btn btn-success album">See Profile</a>
+			 </div>
+		</div>
+	</div>
+
+</div>
+
+<!-- ng-class-odd="'card-img-top'" ng-class-even="'card-img-bottom'" -->
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="jumbotron">
+  <h1></h1> 
+  <button class="btn btn-sucess"></button>
+  <button class="btn btn-sucess"></button>
+</div>
+<div class="row">
+	<div class="col-md-8"></div>
+	<div class="col-md-4"></div>
+</div>
+<div class="row">
+	<div class="col-sm-3"></div>
+
+</div> -->

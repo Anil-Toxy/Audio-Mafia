@@ -1,0 +1,56 @@
+<div>
+	<div id="details"  style="margin-top: 1em">
+		<div class="row cover">
+			<div class="col-md-4"><img src="{{ArtistDetails.image[3]['#text']}}" width="100%" class="img-fulid rounded" alt="{{ArtistDetails.name}}"></div> 
+			<div class="col-md-8">
+				<h1 class="display-2">{{ArtistDetails.name}}</h1>
+				<h2><span class="counter">Listeners :&nbsp;{{ArtistDetails.stats.listeners}}</span></h2>
+				 
+				<h2><span class="counter">Playcount :&nbsp;{{ArtistDetails.stats.playcount}}</span></h2> 
+
+				<span ng-repeat="Musictag in Artisttags" class="badge badge-warning">&nbsp;{{Musictag.name}} &nbsp;</span>
+			</div>
+		</div>
+ 		
+		<div class="content" style="margin-top: 1em">
+    			<div id="home">
+    				<h2 style="text-align: center"><span>Bio</span></h2>
+    				<br>
+					<div class="col-md-12">
+						<p class="bio">
+							{{ArtistDetails.bio.content}}
+						</p>
+
+					</div>
+				</div>
+				<div id="albums">
+					<h2 style="text-align: center"><span>Albums</span></h2>
+					<br>
+					<div class="row justify-content-center">
+						<div class=" col-md-2 card"  ng-repeat= "ArtistAlbum in ArtistAlbums">
+				  			<img  src="{{ArtistAlbum.image[2]['#text']}}" alt="{{ArtistAlbum.name}} " class="img-fulid rounded">
+				 			<div class="card-body text-center">
+				    			<p class="card-title">{{ArtistAlbum.name}}</p>
+				    			<p class="card-text">{{ArtistAlbum.playcount}}</p>
+				    			<a href="#" class="btn btn-success album">See Profile</a>
+				 			</div>
+						</div>
+					</div>	
+				</div>
+
+
+
+
+
+					</div>
+				<div id="tracks">
+					<h2 style="text-align: center"><span>Tracks</span></h2>
+					<br>
+					ZlcHcNClZNonccZcuZcuichuiiucbiucaajkbxiacb
+				</div>
+
+
+		</div>
+	</div>
+
+

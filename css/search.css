@@ -1,0 +1,382 @@
+*{
+  margin: 0;
+  box-sizing: 0;
+  padding: 0;
+}
+body{
+      background: #57b33f;
+}
+.display-4 >.badge-warning {
+    color: #57b33f;
+    background-color: #f0f8ff;
+}
+/* HEADER */
+#header{
+     background: aliceblue;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 555;
+         box-shadow: 0px 4px 20px 1px #000000a6;
+}
+#header > ul > li{
+  border-radius: 7px;
+}
+#header > ul > li:hover {
+    background: #57b33f;
+    transition: all ease-in-out;
+}
+#header > ul > li:hover  a.nav-link {
+     color: white;
+    
+}
+
+.navbar-nav > li.nav-item > a.nav-link {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+        color: #2ca20e;
+        border-right: 1px solid aliceblue;
+        transition: all ease-in-out;
+}
+
+.inputSearch{
+    border: 5px double aliceblue;
+    background: transparent;
+    border-radius: 30px;
+    padding: 5px;
+    min-height: 55px;
+    text-align: center;
+    color: aliceblue;
+} 
+button.btnSearch {
+    margin-top: 15px;
+    border: 2px solid aliceblue;
+    border-radius: 25px;
+    background: transparent;
+    color: aliceblue;
+}
+button.btnSearch:hover span.fa.fa-search {
+    transform: scale(1.1);
+}
+/*FOOTER*/
+
+
+
+/*VIEW */
+.view{
+  padding: 10px;
+   padding-top: 110px;
+}
+
+
+
+/*Home.html CSS STYLE*/
+
+.boxi{
+      position: relative;
+    width: 120px;
+    min-height: 120px;
+    background: aliceblue;
+    margin: 25px 5px;
+    display: inline-block;
+    float: left;
+        border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+        box-shadow: inset 1px -2px 3px 1px #080808ba;
+
+}
+.boxi:hover img.rounded.img-border {
+    transform: skewY(5deg);
+    box-shadow: 4px -4px 5px #ffffff, -5px -4px 5px #f5f9f5;
+        border: 2px solid #34f900;
+}
+.boxi:hover .TrackInfo {
+    color: #39f10a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.boxi:hover .ArtistInfo {
+    color: #39f10a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.TrackImage {
+position: absolute;
+}
+.name-box{
+
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    font-size: 0.75em;
+    transform: translate(-50%,-50%);
+
+}
+.img-border{
+  width: 120px;
+  height: 120px;
+  transition: all ease-in-out 0.19s;
+  
+}
+
+.TrackInfo {
+        position: absolute;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    
+    bottom: -23%;
+    background: #f0f8ff;
+    color: darkcyan;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+        box-shadow: 0px 5px 10px 0px #000000a6;
+        transition: all ease-in-out 0.1s;
+}
+.ArtistImage {
+    position: absolute;
+}
+
+.ArtistInfo {
+       position: absolute;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 0.8em;
+    bottom: -23%;
+    background: #f0f8ff;
+    color: darkcyan;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+        box-shadow: 0px 5px 10px 0px #000000a6;
+        transition: all ease-in-out 0.1s;
+}
+
+h2 > span{
+     
+          border: 2px solid #f7f7f7;
+    border-radius: 5px;
+    font-size: 0.6em;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 20px;
+    box-shadow: 0px 6px 8px 0px #06060647;
+  }
+.modal-body {
+    background: #57b33f;
+}
+/*Artist HTML*/
+.box {
+  
+        position: relative;
+    top: 10%;
+    left: 42%;
+    width: 174px;
+    height: 174px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    border: 4px solid aliceblue;
+}  
+
+
+img.img-fulid.rounded-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} 
+
+#list  > li{
+   margin-bottom: 20px;
+    position: relative;
+}
+#list  > li::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+#list  {
+      list-style: none;
+    padding: 20px 0;
+    position: relative;
+}
+#list::before{
+      top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+     background-color: aliceblue;
+    left: 50%;
+    margin-left: -1.5px;
+
+}
+span.toggle-right {
+    position: relative;
+    float: right;
+       top: 60px;
+    left: -10%;
+        color: aliceblue;
+    font-size: 2em;
+}
+span.toggle-left {
+    position: relative;
+        top: 120px;
+    left: 10%;
+        color: aliceblue;
+    font-size: 2em;
+}
+p.bio {
+    font-size: 1em;
+    text-align: justify;
+    color: black;
+    text-indent: 150px;
+}
+.row.cover {
+        background: #f6f6f92b;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* ALL TABLE STYLE*/
+.table{
+  padding-top: 2rem;
+  color: black;
+}
+
+.table > thead {
+    background: #57b33f;
+}
+tbody {
+    background: aliceblue;
+    }
+.table tr.tracks td{
+     padding: 0;
+    vertical-align: middle;
+}
+tr.tracks {
+    border: 2px solid #57b33f;
+}
+.table td, .table th {
+    
+    border-top: none; 
+}
+.table thead th {
+  color: white;
+    
+   border-bottom: none; 
+}
+/*TRACK PAGE*/
+.round {
+    border-radius: 50%;
+    text-decoration: none;
+    display: inline-block;
+        font-weight: bolder;
+    padding: 5px 14px;
+    background: aliceblue;
+}
+.badge-warning {
+    margin: 5px;
+}
+/*ALBUM HTML*/
+.card{
+      background: rgba(248, 251, 249, 0.9);
+ margin: 30px 15px;
+      padding: 10px;
+      border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 5px 10px 0px #000000a6;
+
+}
+.card-body.text-center{
+   position: relative;
+}
+a.btn.btn-primary.album {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+a.btn.btn-success.album {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+/*LOADER*/
+.container{
+
+}
+div#loader,div#erorr {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+        z-index: 550;
+    background: #57b33f;
+}
+div#loader > div ,div#erorr  > div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+           color: white;
+    transform: translate(-50%,-50%);
+      
+}
+span.fa.fa-spinner ,span.fa.fa-gear{
+      font-size: 5em;
+  -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+/*CONTACT HTML*/
+.input-group>.input-group-append>.input-group-text{
+  border-radius: 0.45em;
+     color: black;
+}
+.contact{
+  background: #ffffff1f;
+    padding: 80px 20px;
+    border: none;
+    border-radius: 10px;
+}
+.form-control{
+  background: transparent;
+      padding: 5px;
+}
+.form-control:focus{
+  background: transparent;
+  }
+ .Contact-text{   border-right: 2px solid aliceblue;
+    background: #f0f8ffed;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.inValid{
+  border: 2px solid red;
+    color: red;
+}
+span.fa-exclamation-circle{
+color: red;
+}

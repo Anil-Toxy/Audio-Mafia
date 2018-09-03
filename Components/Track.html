@@ -1,0 +1,43 @@
+	<div style="padding-top: 5em" class=" animated flipInY">
+	<div class="row justify-content-center">
+	
+		<h1 class="display-4" style="color: white">Search Tracks<span class="badge badge-pill badge-warning">'{{TrackSearchQuery}}'</span></h1>
+	</div>
+	<div class="row justify-content-center">
+	
+		<input type="search" class="col-md-8 justify-content-center inputSearch"   ng-model="TrackSearchQuery">
+	</div>
+	<div class="row justify-content-center">
+		<button type="submit" class="col-md-2 btn btnSearch" value="SEARCH" ng-click="TrackSearch(TrackSearchQuery)"><span class="	fa fa-search"></span></button>
+		
+	</div>
+
+	<div class="row" ng-if="track">
+		<div class="col-lg-12">
+		
+		<table class="table">
+			<thead>
+				<th></th>
+				<th></th>
+				<th>Name</th>
+				<th>Artist</th>
+				<th>Listeners</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="TrackMatch in TrackSearched" class="tracks">
+					<td ng-class="{'animated slideInRight':animate}" ng-show="animate"><img src="{{TrackMatch.image[1]['#text']}}" class="img-fluid" alt="{{TrackMatch.name}}"></td>
+					<td ng-class="{'animated slideInLeft':animate}" ng-show="animate">{{$index + 1}}.</td>
+					<td ng-class="{'animated slideInRight':animate}" ng-show="animate">{{TrackMatch.name}}</td>
+					<td ng-class="{'animated slideInLeft':animate}" ng-show="animate">{{TrackMatch.artist}}</td>
+					<td ng-class="{'animated slideInRight':animate}" ng-show="animate">{{TrackMatch.listeners}}</td>
+
+				</tr>
+			</tbody>	
+		</table>
+		</div>
+	</div>
+	<div class="row justify-content-center" ng-if="track">			
+			<a href="" class="previous round" ng-click="decrement()" ng-hide="pageNo <= 1">&#8249;</a>
+			<a href="" class="next round" ng-click="increment()" >&#8250;</a>
+	</div>
+</div>	

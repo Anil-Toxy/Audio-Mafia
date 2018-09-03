@@ -1,0 +1,90 @@
+
+<div>
+
+	<div ng-if="details" class=" animated flipInY" style="margin-top: 5em">
+
+		<div class="row justify-content-center">
+	
+		    <h1 class="display-4" style="color: white">Search Artist<span class="badge badge-pill badge-warning">'{{artistSearchQuery}}'</span></h1>
+		</div>
+
+
+		<div class="row justify-content-center">
+	
+			<input type="search" class="col-md-8 justify-content-center inputSearch"   ng-model="artistSearchQuery">
+		</div>
+		<div class="row justify-content-center">
+			<button type="submit" class="col-md-2 btn btnSearch"   ng-click="searchArtist(artistSearchQuery)"><span class="	fa fa-search"></span></button>
+
+		</div>
+		<div class="justify-content-center">
+					<ul id="list">
+						<li ng-repeat="Artist in ArtistMatch">
+							<a href="" ng-click="artistDeatil(Artist.name)"><span  ng-class-even="'toggle-left'" ng-class-odd="'toggle-right '"> {{Artist.name}}</span></a>
+							<div class="box" ng-class="{'animated rotateIn':animate}" ng-show="animate" ><a href="" ng-click="artistDeatil(Artist.name)"><img src="{{Artist.image[2]['#text']}}" class="img-fulid rounded-circle" ng-class="{'animated rotateIn':animate}" ng-show="animate" alt="{{Artist.name}}"></a></div>
+						</li>
+						
+					</ul>
+		</div>
+	</div>	
+	<div id="details" ng-if="ArtistDetails"  style="margin-top: 1em">
+		<div class="row cover animated bounceIn ">
+			<div class="col-md-4 "><img src="{{ArtistDetails.image[3]['#text']}}" width="100%" class="img-fulid rounded" alt="{{ArtistDetails.name}}"></div> 
+			<div class="col-md-8">
+				<h1 class="display-2">{{ArtistDetails.name}}</h1>
+				<h2><span class="counter">Listeners :&nbsp;{{ArtistDetails.stats.listeners}}</span></h2>
+				 
+				<h2><span class="counter">Playcount :&nbsp;{{ArtistDetails.stats.playcount}}</span></h2> 
+
+				<span ng-repeat="Musictag in Artisttags" class="badge badge-warning">&nbsp;{{Musictag.name}} &nbsp;</span>
+			</div>
+		</div>
+ 		
+		<div class="content" style="margin-top: 1em">
+				<div id="albums">
+					<h2 style="text-align: center"><span>Albums</span></h2>
+					<br>
+					<div class="row justify-content-center">
+						<div class=" col-md-2 card"  ng-repeat= "ArtistAlbum in ArtistAlbums" ng-class-odd="{'animated slideInLeft':animate}" ng-class-even="{'animated slideInRight':animate}"ng-show="animate">
+				  			<img  src="{{ArtistAlbum.image[2]['#text']}}" alt="{{ArtistAlbum.name}} " class="img-fulid rounded">
+				 			<div class="card-body text-center">
+				    			<p class="card-title">{{ArtistAlbum.name}}</p>
+				    			<p class="card-text">{{ArtistAlbum.playcount}}</p>
+				    			<a href="#" class="btn btn-success album">See Profile</a>
+				 			</div>
+						</div>
+					</div>	
+				</div>
+
+    			<div id="home">
+    				<h2 style="text-align: center"><span>Bio</span></h2>
+    				<br>
+					<div class="col-md-12">
+						<p class="bio">
+							{{ArtistDetails.bio.content}}
+						</p>
+
+					</div>
+				</div>
+				
+
+
+
+
+
+					</div>
+				<div id="tracks">
+					<h2 style="text-align: center"><span>Tracks</span></h2>
+					<br>
+					
+				</div>
+
+
+		</div>
+	</div>
+
+
+
+
+
+</div>

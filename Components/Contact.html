@@ -1,0 +1,47 @@
+<div>
+		<div class=" row justify-content-cente contact animated flipInY">
+
+			<form class="col-sm-5 animated tada">
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><span class="fa fa-exclamation-circle" ng-if="condition"></span>&nbsp; &nbsp;Name&nbsp;</span>
+						
+					</div>
+					<input type="text" name="user.name" ng-model="user.name" ng-class="{'inValid': condition}"  class="form-control" ng-keyup="checkcondition(user.name)">
+					
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><span class="fa fa-exclamation-circle" ng-if="condition"></span>&nbsp; &nbsp;Email&nbsp;</span>
+						
+					</div>
+					<input type="text" name="user.email" ng-class="{'inValid': condition}" ng-model="user.Email" class="form-control" ng-keyup="checkcondition(user.Email)">	
+					
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><span class="fa fa-exclamation-circle" ng-if="condition"></span>&nbsp; &nbsp;Phone No&nbsp;</span>
+						
+					</div>
+					<input type="number" name="user.PhoneNo" ng-class="{'inValid': condition }"  ng-model="user.PhoneNo" class="form-control" ng-keyup="checkcondition(user.PhoneNo)">
+					
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><span class="fa fa-exclamation-circle" ng-if="condition"></span>&nbsp; &nbsp;Message&nbsp;</span>
+
+					</div>
+					<textarea ng-model="user.Msg" class="form-control" ng-class="{'inValid': condition}"  ng-keyup="checkcondition(user.Msg)"></textarea>
+					
+				</div>
+				<div class="input-group mb-3 justify-content-center">
+		 				<button class="btn btn-success"  ng-disabled="user.PhoneNo==='' && user.email==='' &&user.name==='' && user.Msg==''" type="submit" ng-click="submitForm()">SUBMIT</button> 
+		 		</div>
+			</form>
+			<div class="col-sm-7 Contact-text animated tada">
+				<a href="#" ><img src="images/logo.png" class="img-fluid"  width="150" style="margin-bottom:3em" ></a>
+				<p>A MIni Project With Angular Js and Last.fm API</p>
+			</div>
+		</div>
+		
+</div>
